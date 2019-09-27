@@ -25,7 +25,7 @@ namespace Bakery.Order
 
                 if (beginOrderInput == "1")
                 {
-                    Order.beginOrderInput();
+                    Order.OrderInput();
                 }
                 else if (beginOrderInput == "2")
                 {
