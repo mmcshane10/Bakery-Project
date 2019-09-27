@@ -1,0 +1,11 @@
+/Users/Owner/Desktop/Epicodus/full-time/bakery/bin/Debug/netcoreapp2.2/Bakery.deps.json
+/Users/Owner/Desktop/Epicodus/full-time/bakery/bin/Debug/netcoreapp2.2/Bakery.runtimeconfig.json
+/Users/Owner/Desktop/Epicodus/full-time/bakery/bin/Debug/netcoreapp2.2/Bakery.runtimeconfig.dev.json
+/Users/Owner/Desktop/Epicodus/full-time/bakery/bin/Debug/netcoreapp2.2/Bakery.dll
+/Users/Owner/Desktop/Epicodus/full-time/bakery/bin/Debug/netcoreapp2.2/Bakery.pdb
+/Users/Owner/Desktop/Epicodus/full-time/bakery/obj/Debug/netcoreapp2.2/Bakery.csprojAssemblyReference.cache
+/Users/Owner/Desktop/Epicodus/full-time/bakery/obj/Debug/netcoreapp2.2/Bakery.csproj.CoreCompileInputs.cache
+/Users/Owner/Desktop/Epicodus/full-time/bakery/obj/Debug/netcoreapp2.2/Bakery.AssemblyInfoInputs.cache
+/Users/Owner/Desktop/Epicodus/full-time/bakery/obj/Debug/netcoreapp2.2/Bakery.AssemblyInfo.cs
+/Users/Owner/Desktop/Epicodus/full-time/bakery/obj/Debug/netcoreapp2.2/Bakery.dll
+/Users/Owner/Desktop/Epicodus/full-time/bakery/obj/Debug/netcoreapp2.2/Bakery.pdb
