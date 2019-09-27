@@ -28,21 +28,8 @@ namespace Bakery.Order
                     Console.WriteLine("-----------------------------------------------------------");
                     Console.WriteLine("**Bread is $5/loaf. Every third loaf you purchase is FREE**");
                     Console.WriteLine("**Pastries are $2 each or 3 for $5**");
-                    Console.WriteLine("Please enter the number of BREADS you would like to order:");
-                    int userBread = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Please enter the number of PASTRIES you would like to order:");
-                    int userPastry = int.Parse(Console.ReadLine());
-                    Console.WriteLine("Please enter the name for your order:");
-                    string userName = Console.ReadLine();
-
-                    Bread newBread = new Bread (userBread);
-                    Pastry newPastry = new Pastry (userPastry);
-
-                    int orderTotal = newBread.BreadCalculator(newBread) + newPastry.PastryCalculator(newPastry);
-
-                    Console.WriteLine(newBread.BreadOrder + " BREAD will cost $" + newBread.BreadSubTotal + ".00");
-                    Console.WriteLine(newPastry.PastryOrder + " PASTRY will cost $" + newPastry.PastrySubTotal + ".00");
-                    Console.WriteLine("Your grand total is: $" + orderTotal + ".00");
+                    Script.BeginOrder();
+                    Script.ConfirmOrder();
                 }
                 else if (beginOrderInput == "2")
                 {
