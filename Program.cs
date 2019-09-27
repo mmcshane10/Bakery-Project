@@ -40,9 +40,9 @@ namespace Bakery.Order
 
                     int orderTotal = newBread.BreadCalculator(newBread) + newPastry.PastryCalculator(newPastry);
 
-                    Console.WriteLine(newBread.BreadSubTotal);
-                    Console.WriteLine(newPastry.PastrySubTotal);
-                    Console.WriteLine(orderTotal);
+                    Console.WriteLine(newBread.BreadOrder + " BREAD will cost $" + newBread.BreadSubTotal + ".00");
+                    Console.WriteLine(newPastry.PastryOrder + " PASTRY will cost $" + newPastry.PastrySubTotal + ".00");
+                    Console.WriteLine("Your grand total is: $" + orderTotal + ".00");
                 }
                 else if (beginOrderInput == "2")
                 {
@@ -54,9 +54,6 @@ namespace Bakery.Order
                     Console.WriteLine("**Please enter a valid number**");
                     Main();
                 }
-
-
-
             }
             else if (mainMenuInput == "2")
             {
