@@ -29,6 +29,7 @@ namespace Bakery.Order
                     Console.WriteLine("-----------------------------------------------------------");
                     Console.WriteLine("**Bread is $5/loaf. Every third loaf you purchase is FREE**");
                     Console.WriteLine("**Pastries are $2 each or 3 for $5**");
+                    Console.WriteLine("**10% taken off all orders over $40**");
                     Script.BeginOrder();
                     Script.ConfirmOrder();
                 }
@@ -58,21 +59,34 @@ namespace Bakery.Order
 
         public static void BeginOrder()
         {
-        Console.WriteLine("Please enter the number of BREADS you would like to order:");
-        int userBread = int.Parse(Console.ReadLine());
-        Console.WriteLine("Please enter the number of PASTRIES you would like to order:");
-        int userPastry = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the number of BREADS you would like to order:");
+            int userBread = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter the number of PASTRIES you would like to order:");
+            int userPastry = int.Parse(Console.ReadLine());
 
-        Bread newBread = new Bread (userBread);
-        Pastry newPastry = new Pastry (userPastry);
+            Bread newBread = new Bread (userBread);
+            Pastry newPastry = new Pastry (userPastry);
         
-        int orderTotal = newBread.BreadCalculator(newBread) + newPastry.PastryCalculator(newPastry);
+            int orderTotal = newBread.BreadCalculator(newBread) + newPastry.PastryCalculator(newPastry);
 
-        Console.WriteLine("-----------------------------------------------------------");
-        Console.WriteLine(newBread.BreadOrder + " BREAD will cost $" + newBread.BreadSubTotal + ".00");
-        Console.WriteLine(newPastry.PastryOrder + " PASTRY will cost $" + newPastry.PastrySubTotal + ".00");
-        Console.WriteLine("Your grand total is: $" + orderTotal + ".00");
-        Console.WriteLine("-----------------------------------------------------------");
+            if (orderTotal >= 40)
+            {
+                orderTotal = (int)(orderTotal * 0.9);
+                Console.WriteLine("-----------------------------------------------------------");
+                Console.WriteLine(newBread.BreadOrder + " BREAD will cost $" + newBread.BreadSubTotal + ".00");
+                Console.WriteLine(newPastry.PastryOrder + " PASTRY will cost $" + newPastry.PastrySubTotal + ".00");
+                Console.WriteLine("**You qualify for the 10% discount!**");
+                Console.WriteLine("Your grand total is: $" + orderTotal + ".00");
+                Console.WriteLine("-----------------------------------------------------------");
+            }
+            else
+            {
+                Console.WriteLine("-----------------------------------------------------------");
+                Console.WriteLine(newBread.BreadOrder + " BREAD will cost $" + newBread.BreadSubTotal + ".00");
+                Console.WriteLine(newPastry.PastryOrder + " PASTRY will cost $" + newPastry.PastrySubTotal + ".00");
+                Console.WriteLine("Your grand total is: $" + orderTotal + ".00");
+                Console.WriteLine("-----------------------------------------------------------");
+            }
         }
 
         public static void ConfirmOrder()
